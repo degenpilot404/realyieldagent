@@ -1,0 +1,72 @@
+{
+  "name": "realyieldagent",
+  "description": "Project starter for elizaOS",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "project",
+    "elizaos"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "github:elizaos/realyieldagent"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@elizaos/cli": "beta",
+    "@elizaos/core": "beta",
+    "@elizaos/plugin-openai": "^1.0.0-beta.51",
+    "@elizaos/plugin-sql": "beta",
+    "@elizaos/plugin-telegram": "1.0.0-beta.53",
+    "@types/node": "^18.11.18",
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.2",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@vitest/coverage-v8": "2.1.5",
+    "prettier": "3.5.3",
+    "tsup": "8.4.0",
+    "typescript": "^4.9.5",
+    "vitest": "2.1.5"
+  },
+  "scripts": {
+    "start": "elizaos start",
+    "dev": "elizaos dev",
+    "build": "tsup",
+    "lint": "prettier --write ./src",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "format": "prettier --write ./src",
+    "format:check": "prettier --check ./src"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "b165ad83e5f7a21bc1edbd83374ca087e3cd6b33",
+  "packageType": "project",
+  "agentConfig": {
+    "pluginType": "elizaos:project:1.0.0",
+    "projectConfig": {
+      "name": "realyieldagent",
+      "description": "Project starter for elizaOS"
+    }
+  }
+}
